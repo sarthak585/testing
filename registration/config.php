@@ -2,7 +2,7 @@
     /*
      * define the base ur.
      */
-    define('BASE_URL', 'http://localhost/website/');
+    define('BASE_URL', 'http://localhost/test/registration/');
 
     /*
      * Initialize session.
@@ -15,7 +15,7 @@
     if (!isset($doNotAuthenticate)||($doNotAuthenticate != true)) {
         if (!isset($_SESSION['isAuthenticated']) || ($_SESSION['isAuthenticated'] != true)) {
             echo "Access Denied";
-            header('location: ' . BASE_URL . 'views/registration_view.php');
+            header('location: ' . BASE_URL . 'registration_view.php');
             exit;
         }
     }

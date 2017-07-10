@@ -18,7 +18,7 @@ $user = 'root';
 
 $pass = '';
 
-$db = 'raksha_clothes';
+$db = 'test';
 
 
 

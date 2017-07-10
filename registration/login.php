@@ -3,7 +3,7 @@
 	* Include necessary files.
 	*/
 	//include_once('../config/config.php');
-	include_once '../models/login_model.php';
+	include_once 'login_model.php';
 
 	/*
 	* Initialize objects.
@@ -19,12 +19,14 @@
 	if ($user){
 		session_start();
 		$_SESSION['username']=$user['UserName'];
+		$_SESSION['firstname']=$user['FirstName'];
+		$_SESSION['lastname']=$user['LastName'];
 		$_SESSION['isAuthenticated']=true;
 		
-		header('location: ../index.php');
+		header('location: index.php');
 	}
 	else {
 		$error = "Username or Password Invalid";
-		header('location: ../views/registration_view.php?iserror=true');
+		header('location: registration_view.php?iserror=true');
 	}	
 ?>
