@@ -41,7 +41,7 @@
 			$('.addbutton').click(function(){
 				$.ajax({
 				  method: "POST",
-				  url: "http://localhost/website/test_ajax.php",
+				  url: "http://localhost/test/test_ajax.php",
 				  dataType: 'json',
 				  data: { 'name': $('form#testForm').find('input#name').val(), 'addbutton': 'Add' },
 				  success: function(response) {
@@ -62,10 +62,10 @@
 <!-- Insert and Update Form.-->
         <form method="post" name="testForm" id="testForm">
             <input name="name" id="name" type="text" value="" placeholder="Enter Name">
-            <input name="id" type="number" value="" placeholder="Enter this value for edit and delete">
-            <input name="addbutton" class="addbutton" type="button" value="Add" placeholder="Save">
-            <input name="submit" type="submit" value="Edit" placeholder="Save">
-            <input name="submit" type="submit" value="Delete" placeholder="Save">
+            <input name="id" type="number" value="" placeholder="Enter this value for edit and delete" >
+            <input name="addbutton" class="addbutton" type="button" value="Add">
+            <input name="submit" type="submit" value="Edit">
+            <input name="submit" type="submit" value="Delete">
         </form>
 
         <!-- List the Data -->
